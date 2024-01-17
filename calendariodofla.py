@@ -16,8 +16,10 @@ def calcular_dias(data_jogo):
     return dias_faltando + 1
 
 dias_faltando = calcular_dias(dia)
-if dias_faltando > 0:
+if dias_faltando > 1:
     client.create_tweet(text=f"Faltam {dias_faltando} dias para o Flamengo entrar em campo contra o(a) {oponente} pelo(a) {competicao}.")
+if dias_faltando == 1:
+    client.create_tweet(text=f"Falta {dias_faltando} dia para o Flamengo entrar em campo contra o(a) {oponente} pelo(a) {competicao}.")
 else:
     client.create_tweet(text=f"Hoje tem FLAMENGO! O Mengão entra em campo contra o(a) {oponente} pelo(a) {competicao} às {hora}.")
 
