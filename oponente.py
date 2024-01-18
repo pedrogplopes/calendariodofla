@@ -23,4 +23,4 @@ if proximo_jogo_oponente:
 
     # Se encontrou a correspondência, imprima o resultado
     if oponente:
-        print(oponente)
+        print(f"Oponente: {oponente}")
