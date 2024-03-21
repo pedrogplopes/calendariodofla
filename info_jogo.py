@@ -10,7 +10,7 @@ response = requests.get(url)
 html_content = response.text
 
 # Usando expressões regulares para encontrar a primeira ocorrência entre "match" e "winner"
-proximo_jogo_info = re.search(r'match.*?winner"', html_content, re.DOTALL)
+proximo_jogo_info = re.search(r'match.*?winner"', html_content, re.DOTALL | re.UNICODE)
 
 # Se encontrou a correpondência
 if proximo_jogo_info:
