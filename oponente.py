@@ -16,7 +16,7 @@ if proximo_jogo_oponente:
     proximo_jogo_texto = proximo_jogo_oponente.group(0)
     
     # Usando expressão regular para encontrar todas as instâncias após "popularName" entre aspas
-    times = re.findall(r'popularName":"(.*?)"', proximo_jogo_texto)
+    times = re.findall(r'popularName":"(.*?)"', proximo_jogo_texto, re.UNICODE)
 
     # Verificando a instância diferente de "Flamengo" e armazenando em "oponente"
     oponente = next((instancia for instancia in times if instancia != "Flamengo"), None)
