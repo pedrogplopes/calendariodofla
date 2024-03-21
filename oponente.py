@@ -9,14 +9,14 @@ response = requests.get(url)
 html_content = response.text
 
 # Usando expressões regulares para encontrar a primeira ocorrência entre "match" e "location"
-proximo_jogo_oponente = re.search(r'match.*?location"', html_content, re.DOTALL)
+proximo_jogo_oponente = re.search(r'match.*?location"', html_content, re.DOTALL | re.UNICODE)
 
 # Se encontrou a correspondência, extraia as instâncias após "popularName" entre aspas
 if proximo_jogo_oponente:
     proximo_jogo_texto = proximo_jogo_oponente.group(0)
     
     # Usando expressão regular para encontrar todas as instâncias após "popularName" entre aspas
-    times = re.findall(r'popularName":"(.*?)"', proximo_jogo_texto, re.UNICODE)
+    times = re.findall(r'popularName":"(.*?)"', proximo_jogo_texto)
 
     # Verificando a instância diferente de "Flamengo" e armazenando em "oponente"
     oponente = next((instancia for instancia in times if instancia != "Flamengo"), None)
