@@ -1,4 +1,4 @@
-''' Crie uma pasta chamada .github, e outra dentro dela chamada workflows. salve o código abaixo como scheduled_workflow.yml.
+Crie uma pasta chamada .github, e outra dentro dela chamada workflows. salve o código abaixo como scheduled_workflow.yml.
 
 name: Execute Script Daily
 
@@ -25,4 +25,4 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Script
-        run: python calendariodofla.py '''
+        run: python calendariodofla.py
