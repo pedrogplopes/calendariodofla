@@ -1,7 +1,6 @@
 import tweepy
 from datetime import datetime
-from oponente import oponente
-from info_jogo import competicao, dia, hora
+from info_jogo import competicao, dia, hora, oponente
 from config import api_key, api_secret, bearer_token, access_token, access_token_secret
 # Você pode reproduzir a execução em outra conta criando um arquivo config.py e inserindo suas chaves do Twitter Developer Portal
 
